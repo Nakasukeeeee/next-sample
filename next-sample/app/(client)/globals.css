@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger-btn {
+  position: relative;
+  background-color: aqua;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.hamburger-btn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  border-radius: 2px;
+  background-color: chartreuse;
+  width: 45%;
+  height: 3px;
+}
+
+.hamburger-btn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.hamburger-btn span:nth-of-type(2) {
+  top: 23px;
+}
+.hamburger-btn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.hamburger-btn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 14px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+}
+
+.hamburger-btn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 14px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+}

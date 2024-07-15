@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16.3
+    container_name: equipment_management_posgre
+    platform: linux/amd64
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: equipment_management_development
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5430:5432
+volumes:
+  pgdata:
